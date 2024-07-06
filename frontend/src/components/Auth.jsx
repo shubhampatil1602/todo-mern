@@ -33,7 +33,6 @@ const Auth = () => {
           setPassword('');
           setAuth(false);
         }
-        toast.error(data.msg);
       } catch (error) {
         console.log(error);
       }
@@ -56,7 +55,6 @@ const Auth = () => {
           localStorage.setItem('auth_token', data.token);
           navigate('/api/v1/todos');
         }
-        toast.error(data.msg);
       } catch (error) {
         console.log(error);
       }
