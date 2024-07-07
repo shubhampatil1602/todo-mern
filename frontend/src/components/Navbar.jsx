@@ -1,19 +1,14 @@
 import { Link } from 'react-router-dom';
-import Nav from './Nav';
 
 const Navbar = () => {
   const token = localStorage.getItem('auth_token');
-
-  if (!token) {
-    return <Nav />;
-  }
 
   const handleLogout = () => {
     localStorage.removeItem('auth_token');
   };
 
   return (
-    <nav className='w-full bg-white border-gray-200 flex justify-between items-center shadow-md mb-10'>
+    <nav className='w-full bg-blue-50 border-gray-200 flex justify-between items-center shadow-md mb-10'>
       <div className='flex justify-center items-center justify-betwee p-4 w-3/12'>
         <Link to={'/'} className='text-2xl font-bold'>
           TodoApp

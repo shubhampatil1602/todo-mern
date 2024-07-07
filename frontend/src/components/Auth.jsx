@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Toaster, toast } from 'sonner';
+import Nav from './Nav';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
@@ -65,6 +66,7 @@ const Auth = () => {
   return (
     <>
       <Toaster position='top-right' expand={false} richColors />
+      <Nav />
       <h1 className='max-w-sm mx-auto font-bold text-2xl mb-4'>
         {auth ? 'Register' : 'Login'}
       </h1>

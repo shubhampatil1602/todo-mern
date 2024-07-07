@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Toaster, toast } from 'sonner';
+import Navbar from './Navbar.jsx';
 
 const ShowTodos = () => {
   const [todos, setTodos] = useState([]);
@@ -119,6 +120,7 @@ const ShowTodos = () => {
   return (
     <>
       <Toaster position='top-right' expand={false} richColors />
+      <Navbar />
       <div className='w-full flex gap-3 p-2'>
         {/* ----- */}
         <div className='w-2/5 flex flex-col gap-6 items-center'>
